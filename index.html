@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Web Technology</title>
+    </head>
+
+    <body background="Moss.jpg">
+        <center>
+        <form name="regform" action="process.html" method="POST">
+            Usename: <input type="text" name="uname" placeholder="Enter Username" maxlength="15"/> <br/><br/>
+            Password: <input type="password" name="pwd" placeholder="Enter password"/> <br/><br/>
+            Confirm_: <input type="password" name="cpwd" placeholder="Confirm password" /> <br/><br/>
+            Gender: <input type="radio" name="gender" vale="M">Male <input type="radio" name="gender" value="F">Female
+            <br/><br/>
+            Are you physically disabled? 
+            <input type="radio" name="pd" value="No" checked>No <input type="radio" name="pd" value="Yes">Yes
+            <br/><br/>
+            Software Skills:
+            <input type="checkbox" name="skill" value="C"> C
+            <input type="checkbox" name="skill" value="CPP"> C++
+            <input type="checkbox" name="skill" value="Java"> JAVA
+            <br/><br/>
+            Qualification:
+            <select>
+                <option value="btech">B.Tech</option>
+                <option value="mtech">M.Tech</option>
+            </select>
+            <br/><br/>
+            Address: <textarea rows="10" cols="30" placeholder="Enter Address"></textarea>
+            <br/><br/>
+            <input type="submit" value="OK">
+
+        </form>
+        </center>
+    </body>
+</html>
