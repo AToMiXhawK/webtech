@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>User Data</title>
+    <script>
+        function checkName(obj) {
+            var name = obj.value;
+            if (name == "")
+                alert("Enter Name");
+        }
+
+        function checkAge(obj) {
+            var age = obj.value;
+            if (age == "")
+                alert("Enter Age");
+            else if (parseInt(age) < 18)
+                alert("Only 18+");
+        }
+
+        function checkWt(obj) {
+            var wt = obj.value;
+            if (wt == "")
+                alert("Enter Age");
+            else if (parseInt(wt) < 40 || parseInt(wt) > 120)
+                alert("Weight 40-120 only");
+        }
+
+        function validate() {
+            fname = document.getElementById("fname");
+            lname = document.getElementById("lname");
+            age = document.getElementById("age");
+            wt = document.getElementById("wt");
+            checkName(fname);
+            checkName(lname);
+            checkAge(age);
+            checkWt(wt);
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><label>First name*: </label></td>
+            <td><input type="text" id="fname" placeholder="Enter First Name" onblur="checkName(this)" /><br></td>
+        </tr>
+
+        <tr>
+            <td><label>Middle name: </label></td>
+            <td><input type="text" id="mname" placeholder="Enter Middle Name"><br></td>
+        </tr>
+
+        <tr>
+            <td><label>Last name*: </label></td>
+            <td><input type="text" id="lname" placeholder="Enter Last Name" onblur="checkName(this)" /><br></td>
+        </tr>
+        <tr>
+            <td><label>Age*: </label></td>
+            <td><input type="text" id="age" placeholder="Enter Age (18+)" onblur="checkAge(this)" /><br></td>
+        </tr>
+        <tr>
+            <td><label>Weight: </label></td>
+            <td><input type="text" id="wt" placeholder="Enter Weight (40-120)" onblur="checkWt(this)" /><br></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><button onclick="validate()">Submit</button></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
