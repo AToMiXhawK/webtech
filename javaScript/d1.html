@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Simple Calculator</title>
+    </head>
+    <body>
+        First Number : <input type="text" id="f1"><br>
+        Second Number : <input type="text" name="" id="s1"><br>
+        <input type="submit" value="Multiply" id="b1" onclick="multiply()">
+        <input type="submit"  value="Divide" id="b2" onclick="divide()"><br><br>
+        The Result is : <p id="p1"></p>
+    </body>
+</html>
+<script>
+    function divide(){
+        var a=parseInt(document.getElementById('f1').value);
+        var b=parseInt(document.getElementById('s1').value);
+        var ad1=a/b;
+        document.getElementById('p1').innerHTML=ad1;
+    }
+
+    function multiply(){
+        var a=parseInt(document.getElementById('f1').value);
+        var b=parseInt(document.getElementById('s1').value);
+        var ad1=a*b;
+        document.getElementById('p1').innerHTML=ad1;
+
+    }
+</script>

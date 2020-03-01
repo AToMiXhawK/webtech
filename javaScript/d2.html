@@ -1,0 +1,17 @@
+<html>
+    <head> <title>JavaScript</title> </head>
+    <body>
+        Enter a string : <input type="text" name="" id="x1"><br>
+        Enter position of the character to be removed: <input type="text" name="" id="x2"><br>
+        <input type="submit" value="Remove character" id="x3" onclick="chara()"><br>
+        New String is : <p id="p1"></p>
+    </body>
+</html>
+<script>
+    function chara(){
+    var s=document.getElementById('x1').value;
+    var t=parseInt(document.getElementById('x2').value);
+    var ns=s.replace(s.charAt(t-1),'');
+    document.getElementById('p1').innerHTML=ns;
+    }
+</script>

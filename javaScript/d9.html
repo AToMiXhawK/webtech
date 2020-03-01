@@ -1,0 +1,26 @@
+<html>
+    <head> <title>Tokenizer</title> </head>
+    <body>
+        <p id="p1"></p>
+    </body>
+</html>
+<script>
+    var s=prompt("Enter some text");
+    var s1="";
+    var arr=[];
+    for(i=0;i<s.length;i++)
+    {   
+        
+        if(s.charAt(i)==" ")
+        {
+            arr.push(s1);
+            s1="";
+        }
+        else{
+            s1=s1+s.charAt(i);
+        }
+    }
+    arr.push(s1);
+    arr.sort();
+    document.getElementById('p1').innerHTML=arr;
+</script>

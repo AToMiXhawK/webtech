@@ -1,0 +1,20 @@
+<html>
+    <head> <title>sum of numbers</title> </head>
+    <body>
+        Enter a string : <input type="text" id="x1"><br>
+        <input type="submit" value="Get sum" id="t1" onclick="digi_sum()"><br><br>
+        Sum of digits : <p id="p1"></p>
+    </body>
+</html>
+<script>
+    function digi_sum(){
+        var s=document.getElementById('x1').value;
+        var su=0;
+        for(i=0;i<s.length;i++)
+        {
+            if(parseInt(s.charAt(i))>=0 && parseInt(s.charAt(i))<=9)
+                su=su+parseInt(s.charAt(i));
+        }
+        document.getElementById('p1').innerHTML=su;
+    }
+</script>

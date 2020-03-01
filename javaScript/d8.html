@@ -1,0 +1,21 @@
+<html>
+    <head> <title>Reverse</title> </head>
+    <body>
+        <input type="text" id="x1"> 
+        <input type="submit" name="" id="x2" onclick="reverser(parseInt(document.getElementById('x1').value))">
+        <p id="p1"></p> 
+    </body>
+</html>
+<script>
+   // var n1=parseInt(document.getElementById('x1').value);
+    
+    function reverser(num){
+        var n=num,rev=0,d;
+        while(n>0){
+            d=n%10;
+            rev=rev*10+d;
+            n=parseInt(n/10);
+        }
+       document.getElementById('p1').innerHTML=rev;
+    }
+</script>
